@@ -1,5 +1,6 @@
-import logo from './components/logo.js';
+import scadjs from 'scad-js';
+const { cube } = scadjs
 
 export default function () {
-  return logo()
+  return cube([20, 200, 5])
 }
