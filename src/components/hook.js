@@ -21,10 +21,10 @@ function hook() {
     .translate_z(hookRadius - hookRadius / 2);
 }
 
-export default function () {
+function hookAndPost() {
   return union(
     cube([postLength + hookThickness, hookWidth, hookThickness]).translate_x(
-      -20,
+      (postLength * -1) + hookThickness * 2,
     ),
     hook(hookWidth, hookRadius, 0.3)
       .rotate([0, 90, 0])
@@ -32,3 +32,5 @@ export default function () {
       .translate_x(postLength * -1),
   );
 }
+
+export default hookAndPost
