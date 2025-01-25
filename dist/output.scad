@@ -5,10 +5,10 @@ union()
   {
     difference()
     {
-      cube(size = [40, 140, 7], center = true);
+      cube(size = [40, 140, 6.5], center = true);
       translate(v = [-30, 0, 0])
       {
-        translate(v = [0, 0, -1])
+        translate(v = [0, 0, -0.75])
         {
           union()
           {
@@ -139,18 +139,18 @@ union()
       {
         translate(v = [0, 25, 0])
         {
-          cylinder(h = 7.03, r = 0.825, center = true);
+          cylinder(h = 6.53, r = 0.825, center = true);
         }
         translate(v = [0, -25, 0])
         {
-          cylinder(h = 7.03, r = 0.825, center = true);
+          cylinder(h = 6.53, r = 0.825, center = true);
         }
       }
     }
   }
   translate(v = [-30, 0, 0])
   {
-    translate(v = [0, 0, -1])
+    translate(v = [0, 0, -0.75])
     {
       union()
       {
