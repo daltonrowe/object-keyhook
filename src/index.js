@@ -1,13 +1,14 @@
-import { cube, cylinder, difference, union } from "scad-js";
+import { cube, difference, union } from "scad-js";
 import hook from "./components/hook.js";
 import {
   bodyHeight,
   bodyLength,
   bodySpacing,
   bodyThickness,
-  holeRadius,
+  holeHeight,
+  holeThickness,
+  holeWidth,
   hookThickness,
-  nothing,
   postLength,
 } from "./constants.js";
 
@@ -23,11 +24,11 @@ function hooks() {
 
 function holes() {
   return union(
-    cylinder(bodyThickness + nothing, holeRadius).translate_y(bodySpacing / 2),
-    cylinder(bodyThickness + nothing, holeRadius).translate_y(
+    cube([holeHeight, holeWidth, holeThickness]).translate_y(bodySpacing / 2),
+    cube([holeHeight, holeWidth, holeThickness]).translate_y(
       (bodySpacing / 2) * -1,
     ),
-  );
+  ).translate_z((bodyThickness / 2) * -1 + holeThickness / 2);
 }
 
 function body() {
@@ -40,4 +41,4 @@ function keyhook() {
   return union(body(), hooks().debug());
 }
 
-export default hook;
+export default body;

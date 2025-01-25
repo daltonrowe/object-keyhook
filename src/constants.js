@@ -12,4 +12,6 @@ export const bodyHeight = 30;
 export const bodyThickness = 6.5;
 export const bodyLength = 140;
 
-export const holeRadius = 1.65 / 2;
+export const holeHeight = 16;
+export const holeWidth = 24;
+export const holeThickness = 1;
