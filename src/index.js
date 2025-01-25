@@ -8,6 +8,7 @@ import {
   holeRadius,
   hookThickness,
   nothing,
+  postLength,
 } from "./constants.js";
 
 function hooks() {
@@ -17,7 +18,7 @@ function hooks() {
     hook().translate_y(bodySpacing),
   )
     .translate_z((bodyThickness / 2) * -1 + hookThickness / 2)
-    .translate_x((bodyHeight + hookThickness * 2 - bodyHeight / 2) * -1);
+    .translate_x((postLength / 2) * -1);
 }
 
 function holes() {
@@ -36,7 +37,7 @@ function body() {
 }
 
 function keyhook() {
-  return union(body(), hooks());
+  return union(body(), hooks().debug());
 }
 
 export default keyhook;

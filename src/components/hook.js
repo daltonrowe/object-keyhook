@@ -10,14 +10,16 @@ function hook() {
   return square([hookThickness, hookThickness])
     .translate_x(hookRadius)
     .rotate_extrude(180, { convexity: 4, $fn: 40 })
-    .translate_y((hookRadius / 2) * -1)
-    .rotate([-90, 90, 0]);
+    .translate_y((hookRadius / 2) * -1);
 }
 
 function hookAndPost() {
   return union(
     cube([postLength + hookThickness, hookWidth, hookThickness]),
-    hook().translate_x((postLength / 2 + hookRadius / 2) * -1).translate_z(hookRadius)
+    hook()
+      .rotate([0, 90, 90])
+      .translate_x((postLength / 2) * -1 - hookRadius / 2 - hookRadius / 8)
+      .translate_z(hookRadius),
   );
 }
 

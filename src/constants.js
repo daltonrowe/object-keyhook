@@ -8,7 +8,7 @@ export const postLength = 30;
 
 export const bodySpacing = 50;
 
-export const bodyHeight = 40;
+export const bodyHeight = 30;
 export const bodyThickness = 6.5;
 export const bodyLength = 140;
 
