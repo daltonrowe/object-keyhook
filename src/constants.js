@@ -7,3 +7,6 @@ export const hookThickness = 5;
 export const postLength = 30;
 
 export const bodySpacing = 50;
+
+export const bodyHeight = 20;
+export const bodyLength = 140;

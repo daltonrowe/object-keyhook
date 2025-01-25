@@ -17,20 +17,18 @@ function hook() {
     cube([diameter, diameter, diameter]).translate_x(hookRadius),
     cube([diameter, diameter, diameter]).translate_z(hookRadius),
   )
-    .translate_x(hookRadius - hookRadius / 2)
-    .translate_z(hookRadius - hookRadius / 2);
+    .translate_x(hookRadius / 2)
+    .translate_z(hookRadius / 2);
 }
 
 function hookAndPost() {
   return union(
-    cube([postLength + hookThickness, hookWidth, hookThickness]).translate_x(
-      (postLength * -1) + hookThickness * 2,
-    ),
+    cube([postLength + hookThickness, hookWidth, hookThickness]),
     hook(hookWidth, hookRadius, 0.3)
       .rotate([0, 90, 0])
-      .translate_z(hookRadius / 2 + hookThickness / 2)
-      .translate_x(postLength * -1),
+      .translate_x((postLength / 2) * -1 + hookThickness)
+      .translate_z(hookRadius / 2 + hookThickness / 2),
   );
 }
 
-export default hookAndPost
+export default hookAndPost;
