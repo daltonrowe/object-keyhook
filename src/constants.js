@@ -1,4 +1,4 @@
-export const nothing = 0.03
+export const nothing = 0.03;
 
 export const hookRadius = 15;
 export const hookWidth = 5;

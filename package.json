@@ -4,7 +4,7 @@
     "build": "node build.js",
     "dev": "node --watch-path=src build.js",
     "lint": "biome lint --write",
-    "check": "biome check"
+    "check": "biome check --write --unsafe"
   },
   "type": "module",
   "dependencies": {
