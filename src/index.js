@@ -40,4 +40,4 @@ function keyhook() {
   return union(body(), hooks().debug());
 }
 
-export default keyhook;
+export default hook;
