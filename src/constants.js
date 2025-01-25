@@ -11,3 +11,5 @@ export const bodySpacing = 50;
 export const bodyHeight = 40;
 export const bodyThickness = 7;
 export const bodyLength = 140;
+
+export const holeRadius = 1.65 / 2

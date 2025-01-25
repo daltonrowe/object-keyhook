@@ -5,7 +5,9 @@ import {
   bodyLength,
   bodySpacing,
   bodyThickness,
+  holeRadius,
   hookThickness,
+  nothing,
 } from "./constants.js";
 
 function hooks() {
@@ -20,8 +22,8 @@ function hooks() {
 
 function holes() {
   return union(
-    cylinder(20, 3).translate_y(bodySpacing / 2),
-    cylinder(20, 3).translate_y((bodySpacing / 2) * -1),
+    cylinder(bodyThickness + nothing, holeRadius).translate_y(bodySpacing / 2),
+    cylinder(bodyThickness + nothing, holeRadius).translate_y((bodySpacing / 2) * -1),
   );
 }
 

@@ -139,11 +139,11 @@ union()
       {
         translate(v = [0, 25, 0])
         {
-          cylinder(h = 20, r = 3, center = true);
+          cylinder(h = 7.03, r = 0.825, center = true);
         }
         translate(v = [0, -25, 0])
         {
-          cylinder(h = 20, r = 3, center = true);
+          cylinder(h = 7.03, r = 0.825, center = true);
         }
       }
     }
