@@ -13,7 +13,8 @@ function hooks() {
     hook(),
     hook().translate_y(bodySpacing * -1),
     hook().translate_y(bodySpacing),
-  ).translate_z((bodyThickness / 2) * -1 + hookThickness / 2)
+  )
+    .translate_z((bodyThickness / 2) * -1 + hookThickness / 2)
     .translate_x((bodyHeight + hookThickness * 2 - bodyHeight / 2) * -1);
 }
 
@@ -26,14 +27,10 @@ function holes() {
 
 function body() {
   return difference(
-    difference(
-      cube([bodyHeight, bodyLength, bodyThickness]),
-      hooks(),
-      holes(),
-    ),
+    difference(cube([bodyHeight, bodyLength, bodyThickness]), hooks(), holes()),
   );
 }
 
 export default function () {
-  return union(body(), hooks())
+  return union(body(), hooks());
 }
