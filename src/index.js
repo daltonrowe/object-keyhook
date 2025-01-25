@@ -31,6 +31,8 @@ function body() {
   );
 }
 
-export default function () {
-  return union(body(), hooks());
+function keyhook() {
+  return union(body(), hooks())
 }
+
+export default keyhook
