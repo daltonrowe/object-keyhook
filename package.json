@@ -2,7 +2,9 @@
   "name": "object-keyhook",
   "scripts": {
     "build": "node build.js",
-    "dev": "node --watch-path=src build.js"
+    "dev": "node --watch-path=src build.js",
+    "lint": "biome lint --write",
+    "check": "biome check"
   },
   "type": "module",
   "dependencies": {
@@ -10,5 +12,8 @@
   },
   "version": "1.0.0",
   "main": "src/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
 }
