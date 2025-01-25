@@ -14,35 +14,20 @@ union()
           {
             union()
             {
-              cube(size = [55, 5, 5], center = true);
-              translate(v = [0, 0, 10])
+              cube(size = [35, 5, 5], center = true);
+              translate(v = [0, 0, 15])
               {
-                translate(v = [-20, 0, 0])
+                translate(v = [-22.5, 0, 0])
                 {
-                  rotate(a = [0, 90, 0], v = undef)
+                  rotate(a = [-90, 90, 0], v = undef)
                   {
-                    translate(v = [0, 0, 7.5])
+                    translate(v = [0, -7.5, 0])
                     {
-                      translate(v = [7.5, 0, 0])
+                      rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                       {
-                        difference()
+                        translate(v = [15, 0, 0])
                         {
-                          rotate(a = [90, 0, 0], v = undef)
-                          {
-                            cylinder(h = 5, r = 15, center = true);
-                          }
-                          rotate(a = [90, 0, 0], v = undef)
-                          {
-                            cylinder(h = 5.03, r = 10, center = true);
-                          }
-                          translate(v = [15, 0, 0])
-                          {
-                            cube(size = [30, 30, 30], center = true);
-                          }
-                          translate(v = [0, 0, 15])
-                          {
-                            cube(size = [30, 30, 30], center = true);
-                          }
+                          square(size = [5, 5], center = true);
                         }
                       }
                     }
@@ -54,35 +39,20 @@ union()
             {
               union()
               {
-                cube(size = [55, 5, 5], center = true);
-                translate(v = [0, 0, 10])
+                cube(size = [35, 5, 5], center = true);
+                translate(v = [0, 0, 15])
                 {
-                  translate(v = [-20, 0, 0])
+                  translate(v = [-22.5, 0, 0])
                   {
-                    rotate(a = [0, 90, 0], v = undef)
+                    rotate(a = [-90, 90, 0], v = undef)
                     {
-                      translate(v = [0, 0, 7.5])
+                      translate(v = [0, -7.5, 0])
                       {
-                        translate(v = [7.5, 0, 0])
+                        rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                         {
-                          difference()
+                          translate(v = [15, 0, 0])
                           {
-                            rotate(a = [90, 0, 0], v = undef)
-                            {
-                              cylinder(h = 5, r = 15, center = true);
-                            }
-                            rotate(a = [90, 0, 0], v = undef)
-                            {
-                              cylinder(h = 5.03, r = 10, center = true);
-                            }
-                            translate(v = [15, 0, 0])
-                            {
-                              cube(size = [30, 30, 30], center = true);
-                            }
-                            translate(v = [0, 0, 15])
-                            {
-                              cube(size = [30, 30, 30], center = true);
-                            }
+                            square(size = [5, 5], center = true);
                           }
                         }
                       }
@@ -95,35 +65,20 @@ union()
             {
               union()
               {
-                cube(size = [55, 5, 5], center = true);
-                translate(v = [0, 0, 10])
+                cube(size = [35, 5, 5], center = true);
+                translate(v = [0, 0, 15])
                 {
-                  translate(v = [-20, 0, 0])
+                  translate(v = [-22.5, 0, 0])
                   {
-                    rotate(a = [0, 90, 0], v = undef)
+                    rotate(a = [-90, 90, 0], v = undef)
                     {
-                      translate(v = [0, 0, 7.5])
+                      translate(v = [0, -7.5, 0])
                       {
-                        translate(v = [7.5, 0, 0])
+                        rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                         {
-                          difference()
+                          translate(v = [15, 0, 0])
                           {
-                            rotate(a = [90, 0, 0], v = undef)
-                            {
-                              cylinder(h = 5, r = 15, center = true);
-                            }
-                            rotate(a = [90, 0, 0], v = undef)
-                            {
-                              cylinder(h = 5.03, r = 10, center = true);
-                            }
-                            translate(v = [15, 0, 0])
-                            {
-                              cube(size = [30, 30, 30], center = true);
-                            }
-                            translate(v = [0, 0, 15])
-                            {
-                              cube(size = [30, 30, 30], center = true);
-                            }
+                            square(size = [5, 5], center = true);
                           }
                         }
                       }
@@ -156,35 +111,20 @@ union()
       {
         union()
         {
-          cube(size = [55, 5, 5], center = true);
-          translate(v = [0, 0, 10])
+          cube(size = [35, 5, 5], center = true);
+          translate(v = [0, 0, 15])
           {
-            translate(v = [-20, 0, 0])
+            translate(v = [-22.5, 0, 0])
             {
-              rotate(a = [0, 90, 0], v = undef)
+              rotate(a = [-90, 90, 0], v = undef)
               {
-                translate(v = [0, 0, 7.5])
+                translate(v = [0, -7.5, 0])
                 {
-                  translate(v = [7.5, 0, 0])
+                  rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                   {
-                    difference()
+                    translate(v = [15, 0, 0])
                     {
-                      rotate(a = [90, 0, 0], v = undef)
-                      {
-                        cylinder(h = 5, r = 15, center = true);
-                      }
-                      rotate(a = [90, 0, 0], v = undef)
-                      {
-                        cylinder(h = 5.03, r = 10, center = true);
-                      }
-                      translate(v = [15, 0, 0])
-                      {
-                        cube(size = [30, 30, 30], center = true);
-                      }
-                      translate(v = [0, 0, 15])
-                      {
-                        cube(size = [30, 30, 30], center = true);
-                      }
+                      square(size = [5, 5], center = true);
                     }
                   }
                 }
@@ -196,35 +136,20 @@ union()
         {
           union()
           {
-            cube(size = [55, 5, 5], center = true);
-            translate(v = [0, 0, 10])
+            cube(size = [35, 5, 5], center = true);
+            translate(v = [0, 0, 15])
             {
-              translate(v = [-20, 0, 0])
+              translate(v = [-22.5, 0, 0])
               {
-                rotate(a = [0, 90, 0], v = undef)
+                rotate(a = [-90, 90, 0], v = undef)
                 {
-                  translate(v = [0, 0, 7.5])
+                  translate(v = [0, -7.5, 0])
                   {
-                    translate(v = [7.5, 0, 0])
+                    rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                     {
-                      difference()
+                      translate(v = [15, 0, 0])
                       {
-                        rotate(a = [90, 0, 0], v = undef)
-                        {
-                          cylinder(h = 5, r = 15, center = true);
-                        }
-                        rotate(a = [90, 0, 0], v = undef)
-                        {
-                          cylinder(h = 5.03, r = 10, center = true);
-                        }
-                        translate(v = [15, 0, 0])
-                        {
-                          cube(size = [30, 30, 30], center = true);
-                        }
-                        translate(v = [0, 0, 15])
-                        {
-                          cube(size = [30, 30, 30], center = true);
-                        }
+                        square(size = [5, 5], center = true);
                       }
                     }
                   }
@@ -237,35 +162,20 @@ union()
         {
           union()
           {
-            cube(size = [55, 5, 5], center = true);
-            translate(v = [0, 0, 10])
+            cube(size = [35, 5, 5], center = true);
+            translate(v = [0, 0, 15])
             {
-              translate(v = [-20, 0, 0])
+              translate(v = [-22.5, 0, 0])
               {
-                rotate(a = [0, 90, 0], v = undef)
+                rotate(a = [-90, 90, 0], v = undef)
                 {
-                  translate(v = [0, 0, 7.5])
+                  translate(v = [0, -7.5, 0])
                   {
-                    translate(v = [7.5, 0, 0])
+                    rotate_extrude(angle = 180, convexity = 4, $fn = 40)
                     {
-                      difference()
+                      translate(v = [15, 0, 0])
                       {
-                        rotate(a = [90, 0, 0], v = undef)
-                        {
-                          cylinder(h = 5, r = 15, center = true);
-                        }
-                        rotate(a = [90, 0, 0], v = undef)
-                        {
-                          cylinder(h = 5.03, r = 10, center = true);
-                        }
-                        translate(v = [15, 0, 0])
-                        {
-                          cube(size = [30, 30, 30], center = true);
-                        }
-                        translate(v = [0, 0, 15])
-                        {
-                          cube(size = [30, 30, 30], center = true);
-                        }
+                        square(size = [5, 5], center = true);
                       }
                     }
                   }

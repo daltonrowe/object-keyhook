@@ -1,33 +1,23 @@
-import { cube, cylinder, difference, union } from "scad-js";
+import { cube, square, union } from "scad-js";
 import {
   hookRadius,
   hookThickness,
   hookWidth,
-  nothing,
   postLength,
 } from "../constants.js";
 
 function hook() {
-  const hole = hookRadius - hookThickness;
-  const diameter = hookRadius * 2;
-
-  return difference(
-    cylinder(hookWidth, hookRadius).rotate([90, 0, 0]),
-    cylinder(hookWidth + nothing, hole).rotate([90, 0, 0]),
-    cube([diameter, diameter, diameter]).translate_x(hookRadius),
-    cube([diameter, diameter, diameter]).translate_z(hookRadius),
-  )
-    .translate_x(hookRadius / 2)
-    .translate_z(hookRadius / 2);
+  return square([hookThickness, hookThickness])
+    .translate_x(hookRadius)
+    .rotate_extrude(180, { convexity: 4, $fn: 40 })
+    .translate_y((hookRadius / 2) * -1)
+    .rotate([-90, 90, 0]);
 }
 
 function hookAndPost() {
   return union(
     cube([postLength + hookThickness, hookWidth, hookThickness]),
-    hook(hookWidth, hookRadius, 0.3)
-      .rotate([0, 90, 0])
-      .translate_x((postLength / 2) * -1 + hookThickness)
-      .translate_z(hookRadius / 2 + hookThickness / 2),
+    hook().translate_x((postLength / 2 + hookRadius / 2) * -1).translate_z(hookRadius)
   );
 }
 

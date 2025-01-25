@@ -23,7 +23,9 @@ function hooks() {
 function holes() {
   return union(
     cylinder(bodyThickness + nothing, holeRadius).translate_y(bodySpacing / 2),
-    cylinder(bodyThickness + nothing, holeRadius).translate_y((bodySpacing / 2) * -1),
+    cylinder(bodyThickness + nothing, holeRadius).translate_y(
+      (bodySpacing / 2) * -1,
+    ),
   );
 }
 
@@ -34,7 +36,7 @@ function body() {
 }
 
 function keyhook() {
-  return union(body(), hooks())
+  return union(body(), hooks());
 }
 
-export default keyhook
+export default keyhook;
