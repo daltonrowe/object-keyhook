@@ -8,9 +8,7 @@ import {
 
 export default function () {
   return union(
-    cylinder(bodyThickness + nothing, holeRadius).translate_y(
-      bodySpacing / 2,
-    ),
+    cylinder(bodyThickness + nothing, holeRadius).translate_y(bodySpacing / 2),
     cylinder(bodyThickness + nothing, holeRadius).translate_y(
       (bodySpacing / 2) * -1,
     ),
