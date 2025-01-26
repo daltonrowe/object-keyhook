@@ -16,4 +16,4 @@ export const padHeight = 16;
 export const padWidth = 24;
 export const padDepth = 1;
 
-export const holeRadius = 1;
+export const holeRadius = 2;
