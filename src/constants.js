@@ -30,5 +30,3 @@ export const padWidth = constant(24);
 export const padDepth = constant(1);
 
 export const holeRadius = constant(1.6);
-
-const 
