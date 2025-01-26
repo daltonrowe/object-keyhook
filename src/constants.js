@@ -8,7 +8,7 @@ function constant(value) {
   const rand = value * jiggle;
   const dir = Math.random() > 0.5 ? 1 : -1;
 
-  return value + rand * dir
+  return value + rand * dir;
 }
 
 export const nothing = 0.03;
