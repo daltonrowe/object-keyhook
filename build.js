@@ -1,7 +1,9 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
 
-const target = process.argv[2] || "index.js";
+const target = process.argv[2]
+  ? `components/${process.argv[2]}.js`
+  : "index.js";
 console.log(`Building ${target}...`);
 
 const file = path.join(import.meta.dirname, "src", target);
