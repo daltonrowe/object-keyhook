@@ -8,4 +8,7 @@ console.log(`Building ${target}...`);
 const file = path.join(import.meta.dirname, "src", target);
 const scad = (await import(file)).default();
 
-fs.writeFileSync(`./dist/${component}.scad`, scad.serialize({ $fn: 100 }));
+const scadStr = scad.serialize({ $fn: 100 })
+
+fs.writeFileSync(`./dist/${component}.scad`, scadStr);
+fs.writeFileSync("./dist/output.scad", scadStr);
