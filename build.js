@@ -12,3 +12,6 @@ const scadStr = scad.serialize({ $fn: 100 });
 
 fs.writeFileSync(`./dist/${component}.scad`, scadStr);
 fs.writeFileSync("./dist/output.scad", scadStr);
+
+// const scadPath = path.join(import.meta.dirname, 'dist', `${component}.scad`)
+// exec(`openscad ${scadPath}`)
