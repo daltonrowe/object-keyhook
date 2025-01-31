@@ -2,7 +2,7 @@ const jiggle = 0; // between 0 and 1
 
 // random move around variables to ensure
 // measurements don't accidentally fit
-function constant(value) {
+function addJiggle(value) {
   if (!jiggle) return value;
 
   const rand = value * jiggle;
@@ -11,22 +11,26 @@ function constant(value) {
   return value + rand * dir;
 }
 
-export const nothing = 0.03;
+const nothing = 0.03;
 
-export const hookRadius = constant(15);
-export const hookWidth = constant(5);
-export const hookThickness = constant(5);
+const constants = {
+  bodyHeight: 30,
+  bodyLength: 140,
+  bodySpacing: 50,
+  bodyThickness: 6.5,
+  holeRadius: 1.6,
+  holeHeight: bodyThickness + nothing,
+  hookRadius: 15,
+  hookThickness: 5,
+  hookWidth: 5,
+  padDepth: 1,
+  padHeight: 16,
+  padWidth: 24,
+  postLength: 30,
+};
 
-export const postLength = constant(30);
+for (const key of constants) {
+  constants[key] = addJiggle(constants[key]);
+}
 
-export const bodySpacing = constant(50);
-
-export const bodyHeight = constant(30);
-export const bodyThickness = constant(6.5);
-export const bodyLength = constant(140);
-
-export const padHeight = constant(16);
-export const padWidth = constant(24);
-export const padDepth = constant(1);
-
-export const holeRadius = constant(1.6);
+export default constants;
