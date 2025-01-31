@@ -1,11 +1,13 @@
 {
   "name": "object-keyhook",
   "scripts": {
-    "build": "node build.js",
-    "dev": "node --watch-path=src build.js"
+    "render": "node render.js",
+    "dev": "node scripts/dev.js",
+    "lint": "biome check --write --unsafe"
   },
   "type": "module",
   "dependencies": {
+    "@biomejs/biome": "^1.9.4",
     "scad-js": "git@github.com:daltonrowe/scad-js-esm.git"
   },
   "version": "1.0.0",
