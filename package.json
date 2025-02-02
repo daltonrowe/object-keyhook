@@ -1,9 +1,10 @@
 {
   "name": "object-keyhook",
   "scripts": {
-    "render": "node scripts/render.js",
     "dev": "node scripts/dev.js",
-    "lint": "biome check --write --unsafe"
+    "lint": "biome check --write --unsafe",
+    "render": "node scripts/render.js",
+    "publish": "node scripts/publish.js"
   },
   "type": "module",
   "dependencies": {
