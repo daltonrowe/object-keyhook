@@ -1,3 +1,11 @@
+// generate .scad file for a component
+
+// for index.js
+// node scripts/build.js 
+
+// for a component in /components
+// node scripts/build.js mycomponent.js
+
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { distPath, srcPath } from "./utils.js";

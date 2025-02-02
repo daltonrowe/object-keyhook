@@ -1,3 +1,6 @@
+// watch a component for changes and generate new .scad
+// opens specified component files in OpenSCAD
+
 import * as path from "node:path";
 import { distPath, runCommand } from "./utils.js";
 

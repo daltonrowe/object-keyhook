@@ -1,3 +1,5 @@
+// render a single component .scad, .stl, .png
+
 import * as path from "node:path";
 import { distPath, runCommand } from "./utils.js";
 

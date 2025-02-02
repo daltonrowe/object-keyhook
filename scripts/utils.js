@@ -1,3 +1,5 @@
+// utilties for running scadesm scripts
+
 import { spawn } from "node:child_process";
 import * as path from "node:path";
 

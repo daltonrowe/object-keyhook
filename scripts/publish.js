@@ -1,3 +1,5 @@
+// find all components and render .scad, .stl, and .png
+
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { runCommand, srcPath } from "./utils.js";
