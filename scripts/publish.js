@@ -23,6 +23,12 @@ function searchComponents(dirs) {
 const components = [];
 searchComponents(["components"]);
 
+runCommand({
+  color: '36',
+  cmd: 'node',
+  args: ['./scripts/render.js']
+})
+
 for (const component of components) {
   runCommand({
     color: '36',
