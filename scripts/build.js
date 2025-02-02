@@ -1,7 +1,7 @@
 // generate .scad file for a component
 
 // for index.js
-// node scripts/build.js 
+// node scripts/build.js
 
 // for a component in /components
 // node scripts/build.js mycomponent.js

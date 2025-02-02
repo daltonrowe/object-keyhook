@@ -4,7 +4,8 @@
     "dev": "node scripts/dev.js",
     "lint": "biome check --write --unsafe",
     "render": "node scripts/render.js",
-    "publish": "node scripts/publish.js"
+    "publish": "node scripts/publish.js",
+    "clean": "node scripts/clean.js"
   },
   "type": "module",
   "dependencies": {

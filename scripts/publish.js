@@ -12,9 +12,9 @@ function searchComponents(dirs) {
     const filePath = path.join(componentsPath, file);
 
     if (file.endsWith(".js") || file.endsWith(".ts")) {
-      const filePathArray = filePath.split('/');
+      const filePathArray = filePath.split("/");
       const fileName = filePathArray.slice(-1)[0];
-      const [componentName] = fileName.split('.')
+      const [componentName] = fileName.split(".");
       components.push(componentName);
     } else if (fs.lstatSync(filePath).isDirectory()) {
       searchComponents([...dirs, filePath]);
@@ -26,15 +26,15 @@ const components = [];
 searchComponents(["components"]);
 
 runCommand({
-  color: '36',
-  cmd: 'node',
-  args: ['./scripts/render.js']
-})
+  color: "36",
+  cmd: "node",
+  args: ["./scripts/render.js"],
+});
 
 for (const component of components) {
   runCommand({
-    color: '36',
-    cmd: 'node',
-    args: ['./scripts/render.js', component]
-  })
+    color: "36",
+    cmd: "node",
+    args: ["./scripts/render.js", component],
+  });
 }

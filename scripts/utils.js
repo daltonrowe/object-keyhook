@@ -5,6 +5,7 @@ import * as path from "node:path";
 
 export const srcPath = path.join(import.meta.dirname, "..", "src");
 export const distPath = path.join(import.meta.dirname, "..", "dist");
+export const rootPath = path.join(import.meta.dirname, "..");
 
 export function runCommand(command) {
   const { cmd, args, env = {}, color } = command;
