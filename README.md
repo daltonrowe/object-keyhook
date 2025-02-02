@@ -50,6 +50,16 @@ npm install --save-dev --save-exact @biomejs/biome
 npm run lint
 ```
 
+### Clean
+
+To remove all example code, and optionally an existing git info, use `npm run clean`
+
+```sh
+# remove all example code
+npm run clean
+npm run clean -- --remove-git # remove existing git history ⚠️
+```
+
 ## OpenSCAD Integration
 
 TODO
