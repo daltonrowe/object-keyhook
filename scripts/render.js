@@ -1,40 +1,49 @@
-import * as path from "node:path"
+import * as path from "node:path";
 import { distPath, runCommand } from "./utils.js";
 
 const component = process.argv[2];
-const buildArgs = ['./scripts/build.js']
-if (component) buildArgs.push(component)
+const buildArgs = ["./scripts/build.js"];
+if (component) buildArgs.push(component);
 
-const componentName = component ?? 'index'
+const componentName = component ?? "index";
 const scadPath = path.join(distPath, `${componentName}.scad`);
 
-const stlPath = path.join(distPath, `${componentName}.stl`)
-const stlArgs = ['-o', stlPath, scadPath]
+const stlPath = path.join(distPath, `${componentName}.stl`);
+const stlArgs = ["-o", stlPath, scadPath];
 
-const pngPath = path.join(distPath, `${componentName}.png`)
-const pngArgs = ['-o', `${pngPath}`, '--viewall', scadPath]
+const pngPath = path.join(distPath, `${componentName}.png`);
+const pngArgs = [
+  "-o",
+  `${pngPath}`,
+  "--viewall",
+  "--autocenter",
+  "--render",
+  "--imgsize",
+  "1000,1000",
+  scadPath,
+];
 
 const commands = {
-  "build": {
-    color: '32',
-    cmd: 'node',
+  build: {
+    color: "32",
+    cmd: "node",
     args: buildArgs,
-    env: {}
+    env: {},
   },
-  "stl": {
-    color: '35',
-    cmd: 'openscad',
+  stl: {
+    color: "35",
+    cmd: "openscad",
     args: stlArgs,
-    env: {}
+    env: {},
   },
-  "png": {
-    color: '38',
-    cmd: 'openscad',
+  png: {
+    color: "38",
+    cmd: "openscad",
     args: pngArgs,
-    env: {}
-  }
+    env: {},
+  },
 };
 
-runCommand(commands['build'])
-runCommand(commands['stl'])
-runCommand(commands['png'])
+runCommand(commands.build);
+runCommand(commands.stl);
+runCommand(commands.png);

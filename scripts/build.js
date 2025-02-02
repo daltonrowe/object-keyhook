@@ -11,7 +11,7 @@ const file = path.join(srcPath, target);
 const scad = (await import(file)).default();
 
 const scadStr = scad.serialize({ $fn: 100 });
-const scadPath = path.join(distPath, `${component}.scad`)
+const scadPath = path.join(distPath, `${component}.scad`);
 
 fs.writeFileSync(scadPath, scadStr);
 
