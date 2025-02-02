@@ -1,27 +1,40 @@
+import * as path from "node:path"
+import { distPath, runCommand } from "./utils.js";
+
 const component = process.argv[2];
-const watchArgs = ['--watch-path=src', './scripts/build.js']
-if (component) watchArgs.push(component)
+const buildArgs = ['./scripts/build.js']
+if (component) buildArgs.push(component)
 
-const watch = spawn('node', watchArgs);
+const componentName = component ?? 'index'
+const scadPath = path.join(distPath, `${componentName}.scad`);
 
-const scripts = {
-  "watch": {
+const stlPath = path.join(distPath, `${componentName}.stl`)
+const stlArgs = ['-o', stlPath, scadPath]
+
+const pngPath = path.join(distPath, `${componentName}.png`)
+const pngArgs = ['-o', `${pngPath}`, '--viewall', scadPath]
+
+const commands = {
+  "build": {
     color: '32',
+    cmd: 'node',
+    args: buildArgs,
+    env: {}
   },
-  "scad": {
+  "stl": {
     color: '35',
+    cmd: 'openscad',
+    args: stlArgs,
+    env: {}
+  },
+  "png": {
+    color: '38',
+    cmd: 'openscad',
+    args: pngArgs,
+    env: {}
   }
 };
 
-function logData(command, data) {
-  process.stdout.write(`\x1b[${scripts[command].color}m${data}\x1b[0m`);
-}
-
-watch.stdout.on("data", (data) => logData('watch', data));
-watch.stderr.on("data", (data) => logData('watch', data));
-
-const scadPath = path.join(import.meta.dirname, '..', "dist", `${component ? component : 'index'}.scad`);
-const scad = spawn(`openscad`, [scadPath], { shell: true });
-
-scad.stdout.on("data", (data) => logData('scad', data));
-scad.stderr.on("data", (data) => logData('scad', data));
+runCommand(commands['build'])
+runCommand(commands['stl'])
+runCommand(commands['png'])
