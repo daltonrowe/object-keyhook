@@ -1,5 +1,27 @@
-const component = process.argv[2] ? process.argv[2] : "index";
-exec(`node --watch-path=src build.js ${component}`);
+import * as path from "node:path"
+import { distPath, runCommand } from "./utils.js";
 
-const scadPath = path.join(import.meta.dirname, "dist", `${component}.scad`);
-exec(`openscad ${scadPath}`);
+const component = process.argv[2];
+const watchArgs = ['--watch-path=src', './scripts/build.js']
+if (component) watchArgs.push(component)
+
+const scadPath = path.join(distPath, `${component ?? 'index'}.scad`);
+const scadArgs = [scadPath]
+
+const commands = {
+  "watch": {
+    color: '32',
+    cmd: 'node',
+    args: watchArgs,
+    env: {}
+  },
+  "scad": {
+    color: '35',
+    cmd: 'openscad',
+    args: scadArgs,
+    env: {}
+  }
+};
+
+runCommand(commands['watch'])
+runCommand(commands['scad'])
