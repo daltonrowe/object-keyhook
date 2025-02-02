@@ -1,7 +1,7 @@
 {
   "name": "object-keyhook",
   "scripts": {
-    "render": "node render.js",
+    "render": "node scripts/render.js",
     "dev": "node scripts/dev.js",
     "lint": "biome check --write --unsafe"
   },
