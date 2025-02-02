@@ -5,7 +5,7 @@
     "lint": "biome check --write --unsafe",
     "render": "node scripts/render.js",
     "publish": "node scripts/publish.js",
-    "clean": "node scripts/clean.js"
+    "reset": "node scripts/reset.js"
   },
   "type": "module",
   "dependencies": {

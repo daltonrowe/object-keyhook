@@ -1,4 +1,4 @@
-// clean out all examples starting fresh
+// remove all example objects and start fresh
 import * as fs from "node:fs";
 import * as path from "node:path";
 import { stdin as input, stdout as output } from "node:process";
@@ -34,7 +34,7 @@ const answer = await rl.question(
 );
 rl.close();
 
-if (answer === "y") {
+if (answer === "y" || answer === "yes") {
   for (const r of toRemove) {
     fs.rmSync(r);
   }
