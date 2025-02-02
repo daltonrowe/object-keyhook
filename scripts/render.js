@@ -20,6 +20,8 @@ const pngArgs = [
   "--render",
   "--imgsize",
   "1000,1000",
+  "--projection",
+  "o",
   scadPath,
 ];
 
@@ -37,7 +39,7 @@ const commands = {
     env: {},
   },
   png: {
-    color: "38",
+    color: "96",
     cmd: "openscad",
     args: pngArgs,
     env: {},
