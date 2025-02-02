@@ -2,6 +2,11 @@
 
 ## Getting Started
 
+```sh
+npm install
+npm run dev
+```
+
 ### Dev
 
 To generate a .scad file, and update when changes are made, use `npm run dev`.
