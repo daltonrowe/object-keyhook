@@ -28,9 +28,13 @@ findFiles([distPath]);
 
 if (removeGit) toRemove.push(path.join(rootPath, ".git"));
 
+for (const r of toRemove) {
+  console.log(r);
+}
+
 const rl = readline.createInterface({ input, output });
 const answer = await rl.question(
-  "The preceding files will be deleted, is this okay (y/n)",
+  "\nThese files will be deleted, is this okay? (y/n) ",
 );
 rl.close();
 
