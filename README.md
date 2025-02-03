@@ -52,7 +52,7 @@ npm run lint
 
 ### Reset
 
-To remove all example code, and optionally an existing git info, use `npm run clean`
+To remove all example code, and optionally existing git history, use `npm run reset`
 
 ```sh
 # remove all example code
